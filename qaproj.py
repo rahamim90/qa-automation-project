@@ -14,9 +14,9 @@ def test_successful_login():
     try:
         page_title = driver.find_element(By.CLASS_NAME, "title")
         assert page_title.text == "Products"
-        print("סטטוס: הבדיקה עברה בהצלחה! ✅")
+        print("סטטוס: הבדיקה עברה בהצלחה! ")
     except Exception:
-        print("סטטוס: הבדיקה נכשלה! ❌")
+        print("סטטוס: הבדיקה נכשלה!")
     
     driver.quit()
     print("--- סיום בדיקת התחברות מוצלחת ---")
@@ -35,14 +35,14 @@ def test_locked_out_user():
     try:
         error_message = driver.find_element(By.CLASS_NAME, "error-message-container")
         assert "Sorry, this user has been locked out" in error_message.text
-        print("סטטוס: הבדיקה עברה בהצלחה! ✅")
+        print("סטטוס: הבדיקה עברה בהצלחה! ")
     except Exception:
-        print("סטטוס: הבדיקה נכשלה! ❌")
+        print("סטטוס: הבדיקה נכשלה! ")
         
     driver.quit()
     print("--- סיום בדיקת משתמש חסום ---")
 
 
-# =============== הרצת הבדיקות ===============
+# = הרצת הבדיקות =
 test_successful_login()
 test_locked_out_user()
