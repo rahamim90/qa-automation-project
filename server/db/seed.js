@@ -165,4 +165,8 @@ function seed() {
   console.log(`Admin login -> username: "${adminUsername}", password: (from ADMIN_PASSWORD in .env)`);
 }
 
-seed();
+module.exports = { seed };
+
+if (require.main === module) {
+  seed();
+}
