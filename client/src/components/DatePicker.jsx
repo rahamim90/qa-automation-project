@@ -25,9 +25,9 @@ export default function DatePicker({ selectedDate, onSelect, daysAhead = 14 }) {
             key={dateStr}
             type="button"
             onClick={() => onSelect(dateStr)}
-            className={`flex min-w-16 flex-shrink-0 flex-col items-center rounded-lg border px-3 py-2 transition-colors ${
+            className={`flex min-w-16 flex-shrink-0 flex-col items-center rounded-xl border px-3 py-2 transition-all ${
               selected
-                ? 'border-gold bg-gold text-charcoal'
+                ? 'border-gold bg-gradient-to-b from-gold to-orange-400 text-charcoal shadow-[0_0_20px_-6px_rgba(242,177,52,0.6)]'
                 : 'border-gold/15 text-cream/90 hover:border-gold/40'
             }`}
           >

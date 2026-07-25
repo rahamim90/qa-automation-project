@@ -4,11 +4,11 @@ export default function GalleryGrid({ images }) {
   return (
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
       {images.map((img) => (
-        <figure key={img.id} className="overflow-hidden rounded-xl border border-gold/15">
+        <figure className="group overflow-hidden rounded-2xl border border-gold/15 transition-colors hover:border-gold/40" key={img.id}>
           <img
             src={img.imageUrl}
             alt={img.caption || 'תספורת לדוגמה'}
-            className="aspect-square w-full object-cover transition-transform duration-300 hover:scale-105"
+            className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {img.caption && (
             <figcaption className="bg-charcoal-light px-2 py-1 text-center text-xs text-cream/70">

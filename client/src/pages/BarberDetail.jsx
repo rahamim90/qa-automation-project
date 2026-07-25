@@ -92,11 +92,11 @@ export default function BarberDetail() {
         <img
           src={barber.photoUrl}
           alt={barber.name}
-          className="h-40 w-40 flex-shrink-0 rounded-2xl object-cover"
+          className="h-40 w-40 flex-shrink-0 rounded-3xl object-cover shadow-[0_0_30px_-8px_rgba(242,177,52,0.4)]"
         />
         <div>
-          <h1 className="text-3xl text-gold">{barber.name}</h1>
-          <p className="mt-1 text-cream/70">{barber.specialty}</p>
+          <h1 className="text-3xl text-gold sm:text-4xl">{barber.name}</h1>
+          <p className="mt-1 font-medium text-cream/70">{barber.specialty}</p>
           <p className="mt-3 leading-relaxed text-cream/80">{barber.bio}</p>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function BarberDetail() {
       <section className="mt-12">
         <h2 className="mb-4 text-2xl text-gold">קביעת תור</h2>
 
-        <div className="space-y-6 rounded-2xl border border-gold/15 bg-charcoal-light p-6">
+        <div className="space-y-6 rounded-3xl border border-gold/15 bg-charcoal-light p-6">
           <div>
             <h3 className="mb-2 text-sm text-cream/70">1. בחרו שירות</h3>
             <ServiceList

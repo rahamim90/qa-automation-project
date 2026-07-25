@@ -26,8 +26,11 @@ export default function AdminLogin({ onLoggedIn }) {
 
   return (
     <div className="mx-auto max-w-sm px-6 py-24">
-      <h1 className="mb-6 text-center text-2xl text-gold">כניסת ספרים</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <h1 className="mb-6 text-center text-2xl text-gold">כניסת צוות</h1>
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-4 rounded-3xl border border-gold/15 bg-charcoal-light p-6"
+      >
         <div>
           <label className="mb-1 block text-sm text-cream/70" htmlFor="username">
             שם משתמש
@@ -55,7 +58,7 @@ export default function AdminLogin({ onLoggedIn }) {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full rounded-full bg-gold py-3 font-medium text-charcoal transition-opacity hover:opacity-90 disabled:opacity-40"
+          className="w-full rounded-full bg-gradient-to-l from-gold to-orange-400 py-3 font-extrabold text-charcoal transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
         >
           {submitting ? 'מתחבר...' : 'התחברות'}
         </button>

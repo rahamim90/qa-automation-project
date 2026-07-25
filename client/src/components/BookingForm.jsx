@@ -54,7 +54,7 @@ export default function BookingForm({ onSubmit, disabled, submitting, error }) {
       <button
         type="submit"
         disabled={disabled || submitting}
-        className="w-full rounded-full bg-gold py-3 font-medium text-charcoal transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+        className="w-full rounded-full bg-gradient-to-l from-gold to-orange-400 py-3 font-extrabold text-charcoal transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
       >
         {submitting ? 'קובע תור...' : 'קביעת תור'}
       </button>

@@ -31,7 +31,7 @@ export default function BookingConfirmation() {
 
   return (
     <div className="mx-auto max-w-lg px-6 py-16">
-      <div className="rounded-2xl border border-gold/20 bg-charcoal-light p-8 text-center">
+      <div className="rounded-3xl border border-gold/20 bg-charcoal-light p-8 text-center shadow-[0_0_50px_-16px_rgba(242,177,52,0.4)]">
         <h1 className="text-3xl text-gold">התור נקבע בהצלחה!</h1>
         <p className="mt-2 text-cream/70">מחכים לראותך, {appointment.customerName}</p>
 

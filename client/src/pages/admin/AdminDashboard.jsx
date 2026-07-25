@@ -54,7 +54,9 @@ export default function AdminDashboard({ username, onLoggedOut }) {
         <button
           onClick={() => setActiveBarberId('all')}
           className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
-            activeBarberId === 'all' ? 'bg-gold text-charcoal' : 'border border-gold/20 text-cream/80'
+            activeBarberId === 'all'
+              ? 'bg-gradient-to-l from-gold to-orange-400 text-charcoal'
+              : 'border border-gold/20 text-cream/80'
           }`}
         >
           כל הספרים
@@ -64,7 +66,9 @@ export default function AdminDashboard({ username, onLoggedOut }) {
             key={b.id}
             onClick={() => setActiveBarberId(b.id)}
             className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
-              activeBarberId === b.id ? 'bg-gold text-charcoal' : 'border border-gold/20 text-cream/80'
+              activeBarberId === b.id
+                ? 'bg-gradient-to-l from-gold to-orange-400 text-charcoal'
+                : 'border border-gold/20 text-cream/80'
             }`}
           >
             {b.name}
