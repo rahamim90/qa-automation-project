@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../../api/client';
 import AppointmentsTable from '../../components/admin/AppointmentsTable';
 
@@ -33,12 +34,20 @@ export default function AdminDashboard({ username, onLoggedOut }) {
           <h1 className="text-2xl text-gold">לוח ניהול תורים</h1>
           <p className="text-sm text-cream/60">מחובר כ-{username}</p>
         </div>
-        <button
-          onClick={handleLogout}
-          className="rounded-full border border-gold/40 px-4 py-2 text-sm text-gold hover:bg-gold hover:text-charcoal transition-colors"
-        >
-          התנתקות
-        </button>
+        <div className="flex items-center gap-3">
+          <Link
+            to="/about"
+            className="rounded-full border border-gold/20 px-4 py-2 text-sm text-cream/80 hover:border-gold/40 hover:text-gold transition-colors"
+          >
+            אודות המספרה
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="rounded-full border border-gold/40 px-4 py-2 text-sm text-gold hover:bg-gold hover:text-charcoal transition-colors"
+          >
+            התנתקות
+          </button>
+        </div>
       </div>
 
       <div className="mb-6 flex flex-wrap gap-2">
