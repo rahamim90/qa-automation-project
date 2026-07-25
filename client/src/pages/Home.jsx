@@ -30,12 +30,20 @@ export default function Home() {
           <p className="mx-auto mt-4 max-w-xl text-lg text-cream/80">
             חוויית טיפוח גברית מוקפדת, שלושה ספרים מומחים, ותור אונליין בכמה קליקים.
           </p>
-          <Link
-            to="/products"
-            className="mt-8 inline-block rounded-full border border-gold/50 px-6 py-2.5 text-gold hover:bg-gold hover:text-charcoal transition-colors"
-          >
-            לצפייה במוצרים שלנו
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/products"
+              className="inline-block rounded-full border border-gold/50 px-6 py-2.5 text-gold hover:bg-gold hover:text-charcoal transition-colors"
+            >
+              לצפייה במוצרים שלנו
+            </Link>
+            <Link
+              to="/about"
+              className="inline-block rounded-full px-6 py-2.5 text-cream/80 hover:text-gold transition-colors"
+            >
+              אודות המספרה
+            </Link>
+          </div>
         </div>
       </section>
 
