@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../api/client';
 import ProductCard from '../components/ProductCard';
 
@@ -29,6 +30,15 @@ export default function Products() {
           ))}
         </div>
       )}
+
+      <div className="mt-12 text-center">
+        <Link
+          to="/about"
+          className="inline-block rounded-full border border-gold/40 px-6 py-2.5 text-gold hover:bg-gold hover:text-charcoal transition-colors"
+        >
+          אודות המספרה
+        </Link>
+      </div>
     </div>
   );
 }
