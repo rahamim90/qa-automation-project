@@ -1,0 +1,57 @@
+CREATE TABLE IF NOT EXISTS barbers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  slug TEXT NOT NULL UNIQUE,
+  bio TEXT NOT NULL,
+  specialty TEXT NOT NULL,
+  photo_url TEXT NOT NULL,
+  working_hours_json TEXT NOT NULL,
+  display_order INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS gallery_images (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  barber_id INTEGER NOT NULL REFERENCES barbers(id) ON DELETE CASCADE,
+  image_url TEXT NOT NULL,
+  caption TEXT,
+  display_order INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS services (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  barber_id INTEGER REFERENCES barbers(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  duration_minutes INTEGER NOT NULL,
+  price INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS appointments (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  barber_id INTEGER NOT NULL REFERENCES barbers(id) ON DELETE CASCADE,
+  service_id INTEGER NOT NULL REFERENCES services(id),
+  customer_name TEXT NOT NULL,
+  customer_phone TEXT NOT NULL,
+  date TEXT NOT NULL,
+  time TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'confirmed',
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  notified_at TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_appointments_barber_date_time
+  ON appointments (barber_id, date, time);
+
+CREATE TABLE IF NOT EXISTS products (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  description TEXT NOT NULL,
+  price INTEGER NOT NULL,
+  image_url TEXT NOT NULL,
+  in_stock INTEGER NOT NULL DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS admin_users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT NOT NULL UNIQUE,
+  password_hash TEXT NOT NULL
+);

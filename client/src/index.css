@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #1a1614;
+  --color-charcoal-light: #241f1c;
+  --color-charcoal-lighter: #322b27;
+  --color-gold: #c9a24b;
+  --color-gold-light: #ddc07a;
+  --color-cream: #f3ecdf;
+
+  --font-display: "Frank Ruhl Libre", serif;
+  --font-body: "Heebo", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
