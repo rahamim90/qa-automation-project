@@ -50,6 +50,11 @@ export default function About() {
         >
           הכירו את הספרים שלנו
         </Link>
+        <div className="mt-4">
+          <Link to="/" className="text-cream/60 underline">
+            חזרה לדף הבית
+          </Link>
+        </div>
       </div>
     </div>
   );
