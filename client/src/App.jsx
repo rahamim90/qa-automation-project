@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import About from './pages/About';
 import BarberDetail from './pages/BarberDetail';
 import BookingConfirmation from './pages/BookingConfirmation';
 import Products from './pages/Products';
@@ -29,6 +30,7 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/barbers/:slug" element={<BarberDetail />} />
             <Route path="/booking-confirmation/:id" element={<BookingConfirmation />} />
             <Route path="/products" element={<Products />} />

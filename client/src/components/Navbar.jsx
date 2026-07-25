@@ -11,6 +11,9 @@ export default function Navbar() {
           <Link to="/" className="hover:text-gold transition-colors">
             בית
           </Link>
+          <Link to="/about" className="hover:text-gold transition-colors">
+            אודות
+          </Link>
           <Link to="/products" className="hover:text-gold transition-colors">
             מוצרים
           </Link>
